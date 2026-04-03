@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: evidexus-backend
+    env: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: API_KEY
+        value: evidexus_mobile_dev_key
